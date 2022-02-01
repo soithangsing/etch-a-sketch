@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'EvoleyNotes';
+  src: url('EvoleyNotes.eot');
+  src: url('EvoleyNotes.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EvoleyNotesRegular';
+  src: url('EvoleyNotesRegular.svg#EvoleyNotesRegular') format('svg'),
+       url('EvoleyNotesRegular.ttf') format('truetype'),
+       url('EvoleyNotesRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
