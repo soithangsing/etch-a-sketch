@@ -1,5 +1,5 @@
 const gridContainerElement = document.querySelector('.grid__container');
-
+const eraseButton = document.getElementById('eraser-button');
 
 for(let i = 0; i < 16 * 16; i++) {
     let div = document.createElement('div');
@@ -18,5 +18,11 @@ const randomColor = () => `rgb(${randomInt(0,255)},${randomInt(0,255)},${randomI
 gridItems.forEach(item => {
     item.addEventListener('mouseenter', function(e) {
         item.style.backgroundColor = randomColor();
+    })
+})
+
+eraseButton.addEventListener('click', function(e) {
+    gridItems.forEach(item => {
+            item.style.backgroundColor = '#fff';
     })
 })

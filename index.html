@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <title>Etch-A-Sketch</title>
+        <title>Etch A Sketch</title>
     </head>
 
     <body>
@@ -17,12 +17,42 @@
 
         <div class="top__buttons">
             <div>
-                <button><i class='bx bxs-eraser'></i></button>
+                <button id="eraser-button"><i class='bx bxs-eraser'></i></button>
             </div>
         </div>
 
+        
         <div class="grid__container">
+            
+        </div>
+        
+        <div class="slider__container">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
 
+        <div class="brushes">
+            <div class="container__title"><h3>Brushes</h3></div>            
+            <div>
+                <button class="brush" id="red-brush">Red</button>
+            </div>
+            <div>
+                <button class="brush" id="orange-brush">Orange</button>
+            </div>
+            <div>
+                <button class="brush" id="yellow-brush">Yellow</button>
+            </div>
+            <div>
+                <button class="brush" id="green-brush">Green</button>
+            </div>
+            <div>
+                <button class="brush" id="blue-brush">Blue</button>
+            </div>
+            <div>
+                <button class="brush" id="purple-brush">Purple</button>
+            </div>
+            <div>
+                <button class="brush" id="rainbow-brush">Rainbow</button>
+            </div>
         </div>
     </main>
         <script src="script.js"></script>
