@@ -1,24 +1,12 @@
-@font-face {
-    font-family: 'EvoleyNotes';
-    src: url('/fonts/Evoley-Note/EvoleyNotes.eot');
-    src: url('/fonts/Evoley-Note/EvoleyNotes.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'EvoleyNotesRegular';
-    src: url('/fonts/Evoley-Note/EvoleyNotesRegular.svg#EvoleyNotesRegular') format('svg'),
-         url('/fonts/Evoley-Note/EvoleyNotesRegular.ttf') format('truetype'),
-         url('/fonts/Evoley-Note/EvoleyNotesRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
 
-body{
+*{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    box-sizing: inherit;
+}
+
+body{
     background-color: lavender;
 }
 
@@ -29,17 +17,23 @@ body{
 h1 {
     margin: 0;
     padding: 0;
-    font-size: 5rem;
+    font-size: 3.5rem;
 }
 
-main{
+.left__column{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 35rem;
-    font-family: 'EvoleyNotesRegular';
-    border: 2px solid;
+}
+
+main{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-family: 'New Rocker', cursive;
     margin-top: 5rem;
     margin-left: 5rem;
     margin-right: 5rem;
@@ -47,42 +41,35 @@ main{
 }
 
 .grid__container{
-    display: flex;
-    height: 192px;
-    width: 192px;
-    flex-wrap: wrap;
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
 }
 
 .grid__items{
-    height: 10px;
-    width: 10px;
-    border: solid 1px;
+    user-select: none;
 }
 
-.top__buttons{
+.paint__buttons{
    margin-bottom: 1.2rem;
 }
 
-.top__buttons button{
+.paint__buttons button{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    width: auto;
+    border-radius: 50%;
 }
 
 .erased {
     background-color: white;
 }
 
-.brushes{
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   position: absolute;
-   left: 62%;
-   top: 15rem;
-}
-
 .slider__container{
     margin-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
 }
