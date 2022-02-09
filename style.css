@@ -6,12 +6,26 @@
     box-sizing: inherit;
 }
 
+html{
+    position: relative;
+    min-height: 100%;
+}
+
 body{
-    background-color: lavender;
+    background-image: url(fire-background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    /* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; */
 }
 
 .header{
    margin-bottom: 2rem;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
 }
 
 h1 {
@@ -45,6 +59,7 @@ main{
     width: 500px;
     height: 500px;
     background-color: #fff;
+    border: solid black 2px;
 }
 
 .grid__items{
@@ -52,7 +67,10 @@ main{
 }
 
 .paint__buttons{
-   margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
 }
 
 .paint__buttons button{
@@ -62,14 +80,59 @@ main{
     font-size: 2rem;
     width: auto;
     border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.paint__buttons button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.extra__buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.extra__buttons button{
+    font-family: 'New Rocker', cursive;
+    font-size: 1.8rem;
+    padding: 0.4rem;
+    border-radius: 1.8rem;
+    cursor: pointer;
+}
+
+.active__button{
+    background-color: #fff24b;
+    color: #d11f1b;
+}
+
+.extra__buttons button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .erased {
     background-color: white;
 }
 
+.size__value{
+    font-weight: 600;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
 .slider__container{
     margin-top: 2rem;
     text-align: center;
     font-size: 2rem;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: none;
 }

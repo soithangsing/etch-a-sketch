@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <title>Etch A Sketch</title>
+        <title>Rockstar-Sketch 🎸</title>
     </head>
 
     <body>
@@ -13,12 +13,19 @@
 
         <div class="left__column">
             <div class="header">
-                <h1>Rockstar-Sketch</h1>
+                <h1>Rockstar-Sketch 🎸</h1>
             </div>
 
             <div class="paint__buttons">
                 <button id="eraser-button"><i class='bx bx-reset'></i></button>
+                <input type="color" class="color__input">
             </div>
+
+            <div class="extra__buttons">
+                <button id="color-button">Paint Brush</button>
+                <button id="rubber-button">Eraser</button>
+            </div>
+            
 
             <div class="slider__container">
                 <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
@@ -29,7 +36,6 @@
         <div class="grid__container">
             
         </div>
-        
         
 
     </main>

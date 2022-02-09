@@ -2,10 +2,14 @@
 
 let currentSize = 16;
 
+let currentMode = 'brush';
+
 const gridContainerElement = document.querySelector('.grid__container');
 const eraseButton = document.getElementById('eraser-button');
 const slider = document.getElementById('myRange');
-const sliderValue = document.querySelector('.size__value')
+const sliderValue = document.querySelector('.size__value');
+const brushButton = document.getElementById('color-button');
+const eraserButton = document.getElementById('rubber-button');
 
 // *********Create Grid Function start 
 
@@ -22,7 +26,6 @@ function createGrid(size) {
                 })
             }
         }
-        
 
 // *********Create Grid Function end
         
@@ -59,16 +62,21 @@ slider.onchange = (e) => {
     gridContainerElement.innerHTML = ``;
     createGrid(currentSize);
 }
+brushButton.onclick = (e) => colorStart(e.target);
+eraserButton.onclick = (e) => eraseStart(e.target);
 
 function updateSizeValue (value) {
     sliderValue.innerHTML = `${value} x ${value}`;
 }
 
-function setSize (newSize) {
-    currentSize = newSize;
+function activeButton(element) {
+    element.classList.add('active__button');
 }
 
-function sizeChange(value) {
-    setSize(value);
-    reloadGrid();
+function colorStart(event) {
+    activeButton(event);
+}
+
+function eraseStart(event) {
+    activeButton(event);
 }
