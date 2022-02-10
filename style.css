@@ -161,10 +161,6 @@ input[type="color"] {
 
 @media (max-width: 650px)  {
 
-    body{
-        overflow: scroll;
-    }
-
     .main{
         flex-direction: column;
         align-items: center;
