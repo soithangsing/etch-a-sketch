@@ -4,7 +4,7 @@ let currentSize = 16;
 
 let currentMode = 'brush';
 
-let currentColor = 'black';
+let currentColor = '#d11f1b';
 
 const gridContainerElement = document.querySelector('.grid__container');
 const eraseButton = document.getElementById('eraser-button');
@@ -12,12 +12,19 @@ const slider = document.getElementById('myRange');
 const sliderValue = document.querySelector('.size__value');
 const brushButton = document.getElementById('color-button');
 const eraserButton = document.getElementById('rubber-button');
+const colorPicker = document.querySelector('.color__input');
 
 // function to set current Mode
 
 function setCurrentMode(newMode) {
     activateButton(newMode)
     currentMode = newMode;
+}
+
+// function to set current color
+
+function setCurrentColor (newColor) {
+    currentColor = newColor;
 }
         
 // *********Random Color Function 
@@ -29,6 +36,7 @@ const randomColor = () => `rgb(${randomInt(0,255)},${randomInt(0,255)},${randomI
 // *********Random Color Function end
 
 createGrid(currentSize);
+activateButton('brush');
 
 const gridItems = document.querySelectorAll('.grid__items');
 
@@ -49,7 +57,7 @@ eraseButton.addEventListener('click', function(e) {
 // Function for sketching end
 
 // Event Handlers
-
+colorPicker.onchange = (e) => setCurrentColor(e.target.value)
 brushButton.onclick = () => setCurrentMode('brush');
 eraserButton.onclick = () => setCurrentMode('rubber');
 slider.onmousemove = (e) => updateSizeValue(e.target.value);
