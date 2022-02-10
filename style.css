@@ -161,10 +161,11 @@ input[type="color"] {
 
 @media (max-width: 650px)  {
 
-    .main{
+    main{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .grid__container{
